@@ -36,8 +36,8 @@ ol, ul {
 }
 @font-face {
     font-family: 'Open Sans Condensed', sans-serif;
-    src: local('Open Sans Condensed'),  url(../fonts/opensanscondbold.ttf) format('truetype'); 
-    font-weight: 700;
+    src: url(../fonts/opensanscondbold.ttf) format('truetype'); 
+    /* font-weight: 700; */
 
 }
 
@@ -99,7 +99,7 @@ ul.icons-container li {
     background: transparent;
     z-index: 10;
 }
-.t-menu li a{
+.t-menu{
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
     color: #606060;
