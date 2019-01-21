@@ -1,0 +1,355 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+ol, ul {
+	list-style: none;
+}
+
+
+@font-face {
+    font-family: 'Molot';
+    src: local('Molot'), url('molot.woff2') format('woff2'), url('molot.woff') format('woff'), url('molot.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+
+.menu-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 75px;
+    justify-content: center;
+    background: #ffffff;
+}
+.menu-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-left: 60px;
+    width: 735px;
+}
+.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 540px;
+    justify-content: space-between;
+}
+
+.icons-container {
+    margin-left: 60px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 135px;
+}
+ul.icons-container li {
+    width: 30px;
+    height: 30px;
+}
+.burger-button {
+    display: none;
+    background: grey;
+}
+
+.close-button {
+    display: none;
+    color: #c7773cd1;
+    font-family: 'Open Sans';
+    font-weight: 900;
+    text-align: center;
+    font-size: 3em;
+    line-height: 0.5;
+}
+.close-field {
+    position: absolute;
+    background: transparent;
+    z-index: 10;
+}
+.t-menu {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    color: #606060;
+    text-transform: uppercase;
+}
+
+t-menu:hover{
+    color: #c7773cd1;
+}
+.icon {
+    fill:#606060;
+}
+@media screen and (max-width: 960px){
+    .burger-button, .close-button {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    .burger-button:hover, .close-button:hover {
+        cursor: pointer;
+    }
+    .icon {
+        fill:#ffffff;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .menu-container {
+        height: 50px;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    .menu-wrapper {
+        display: none;
+        margin: 0;
+        padding: 10px;
+        background: #c7773cd1;
+        flex-flow: column;
+        justify-content: left;
+        width: 250px;
+        position: absolute;
+        right: 0; top: 50px;
+        z-index: 15;
+    }
+    
+    .menu {
+        display: flex;
+        flex-flow: column;
+        line-height: 2em;
+        width: 100%;
+    }
+    .icons-container {
+        margin: 20px auto 20px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 135px;
+    }
+    
+    .t-menu {
+        color: #ffffff;
+    }    
+}
+
+.t-title-1 {
+    font-family: 'Molot';
+    margin-top: 80px; 
+    color: #b8530f;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.item {
+    margin-top: 20px; 
+    box-sizing: border-box;
+    width: 220px;
+    height: 220px;
+    border: 1px solid #000000;
+    background-image: url(../img/fon-item.jpg);
+    position: relative;
+    cursor: pointer;
+}
+
+.t-title-item {
+    font-family: 'Molot';
+    background: #f6f7e9;
+    height: 40px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+}
+
+.items-container {
+    margin: 10px auto 0;
+    width: 940px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+@media screen and (max-width: 960px){
+    .items-container {
+        width: 460px;
+    }
+}
+
+.big {
+    width: 460px;
+    height: 220px;
+    background-image: url(../img/fon-item-big.jpg)
+}
+.logo {
+    width: 100px;
+    height: 30px;
+    background: #eaeaea
+}
+
+.big-items-container {
+    margin: auto;
+    width: 940px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+@media screen and (max-width: 960px){
+    .big-items-container {
+        width: 460px;
+    }
+}
+.item-hover{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    background: #ffffff;
+    color: #b8530f;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    margin: auto;
+    z-index: 5;
+    cursor: pointer;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.slides-container {
+    position: relative;
+/*    width: 10000px;*/
+}
+
+.slide {
+    width: 100vw;
+    position: absolute;
+/*    top: 0; right: 0; bottom: 0; left: 0;*/
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.slide-img {
+    width: 100%;
+}
+
+
+.button {
+    display: block;
+    width: 140px;
+    height: 40px;
+    background: #c7773cd1;
+    border: none;
+    margin: auto;
+    position: absolute;
+    bottom: 15%; left: 0; right: 0;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+.t-button {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.slider {
+    width:100vw;
+    position: relative;
+}
+
+.arrow-left, .arrow-right {
+    z-index: 5;
+    position:absolute;
+    display:block;
+    width:29px;
+    height:29px;
+    cursor:pointer;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background: #7d7d7d69;
+}
+
+.arrow-left {
+    left:0;
+    
+}
+
+.arrow-right {
+    right: 0;
+}
+
+.bullet-container {
+    position: absolute;
+    left: 0; right: 0;
+    z-index: 5;
+    bottom: 7%;
+}
+
+.bullets {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.bullet{
+    box-sizing: border-box;
+    width:11px;
+    height:11px;
+    margin-right: 5px;
+    padding:0;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+.bullet:last-child{
+    margin: 0;
+}
+.active{
+    background: #ffffff;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+.arrows {
+    fill: #c7773cd1;
+    position: absolute;    
+    top: 0; bottom: 0;
+    margin: auto;
+}
