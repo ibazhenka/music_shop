@@ -29,7 +29,7 @@ ol, ul {
 
 
 @font-face {
-    font-family: 'Molot';
+    font-family: 'Molot', sans-serif;
     src: local('Molot'), url('../fonts/molot.woff2') format('woff2'), url('../fonts/molot.woff') format('woff'), url('../fonts/molot.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
@@ -179,9 +179,16 @@ t-menu:hover{
     width: 220px;
     height: 220px;
     border: 1px solid #000000;
-    background-image: url(../img/fon-item.jpg);
     position: relative;
     cursor: pointer;
+    display: flex; 
+    flex-flow: column;
+    
+}
+.item-img-background {
+    background: 
+        url(../img/stars.jpg) right bottom no-repeat,
+        url(../img/stars1.jpg) left 40px no-repeat;
 }
 
 .t-title-item {
@@ -192,6 +199,10 @@ t-menu:hover{
     text-transform: uppercase;
     text-align: center;
     line-height: 40px;
+}
+
+.item-img{
+    align-self: center;
 }
 
 .items-container {
@@ -207,10 +218,15 @@ t-menu:hover{
     }
 }
 
-.big {
+@media screen and (max-width: 460px){
+    .items-container {
+        width: 220px;
+    }
+}
+
+.item-big {
     width: 460px;
     height: 220px;
-    background-image: url(../img/fon-item-big.jpg)
 }
 .logo {
     width: 100px;
@@ -228,6 +244,11 @@ t-menu:hover{
 @media screen and (max-width: 960px){
     .big-items-container {
         width: 460px;
+    }
+}
+@media screen and (max-width: 460px){
+    .big-items-container {
+        width: 220px;
     }
 }
 .item-hover{
@@ -255,7 +276,6 @@ t-menu:hover{
 .slide {
     width: 100vw;
     position: absolute;
-/*    top: 0; right: 0; bottom: 0; left: 0;*/
     opacity: 0;
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;

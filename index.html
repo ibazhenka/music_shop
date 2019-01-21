@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 <body>
+   <div id="body">
     <nav class="menu-container">
         <div class="logo"></div>
         <div class="menu-wrapper">
@@ -129,37 +130,47 @@
     <section>
         <h1 class="t-title-1">★ our goods ★</h1>
         <div class ="items-container">
-            <div class="item">
+            <div class="item item-img-background">
                 <h3 class="t-title-item">★ rings ★</h3>
+                <img class="item-img" src="img/ring.png"/>
             </div>
-            <div class="item">
+            <div class="item item-img-background">
                 <h3 class="t-title-item">★ bracelets ★</h3>
+                <img class="item-img" src="img/bracelets.png"/>
             </div>
-            <div class="item">
+            <div class="item item-img-background">
                 <h3 class="t-title-item">★ necklace ★</h3>
+                <img class="item-img" src="img/necklace.png"/>
             </div>
-            <div class="item">
+            <div class="item item-img-background">
                 <h3 class="t-title-item">★ watch ★</h3>
+                <img class="item-img" src="img/watch.png"/>
             </div>
-            <div class="item">
+            <div class="item item-img-background">
                 <h3 class="t-title-item">★ bedding ★</h3>
+                <img class="item-img" src="img/bedding.png"/>
             </div>
-            <div class="item">
+            <div class="item item-img-background">
                 <h3 class="t-title-item">★ home and decor ★</h3>
+                <img class="item-img" src="img/art.png"/>
             </div>
-            <div class="item">
+            <div class="item item-img-background">
                 <h3 class="t-title-item">★ earring ★</h3>
+                <img class="item-img" src="img/earring.png"/>
             </div>
-            <div class="item">
+            <div class="item item-img-background">
                 <h3 class="t-title-item">★ bags ★</h3>
+                <img class="item-img" src="img/bag.png"/>
             </div>
         </div>
         <div class="big-items-container">
-            <div class="item big">
+            <div class="item item-big  item-img-background">
                 <h3 class="t-title-item">★ men ★</h3>
+                <img class="item-img" src="img/ring.png"/>
             </div>
-            <div class="item big">
+            <div class="item item-big item-img-background">
                 <h3 class="t-title-item">★ women ★</h3>
+                <img class="item-img" src="img/ring.png"/>
             </div>
         </div>
     </section>
@@ -172,14 +183,24 @@
             // BURGER MENU
             $(".close-field").css({'width': ()=>document.body.clientWidth, 'height': ()=>window.innerHeight-$('.menu-container').outerHeight()} )
             $(".close-button, .close-field").hide();
+            
             $(".burger-button").click(function() {
                 $(".menu-wrapper").slideToggle( "slow", function() {
-                    $("body").css({'position': 'fixed', 'overflow': 'scroll'})
-                    $(".burger-button").hide();
-                    $(".close-button, .close-field").show()
-                    
-                    if($(this).css('display') === 'none'){
-                       $(this).removeAttr('style');
+                    if(window.innerHeight < $(".menu-wrapper").outerHeight()){
+                        $(".burger-button").hide();
+                        $(".close-button, .close-field").show()
+
+                        if($(this).css('display') === 'none'){
+                           $(this).removeAttr('style');
+                        }
+                    } else {
+                        $("#body").css({'position': 'fixed', 'overflow': 'scroll'})
+                        $(".burger-button").hide();
+                        $(".close-button, .close-field").show()
+
+                        if($(this).css('display') === 'none'){
+                           $(this).removeAttr('style');
+                        }
                     }
                 });
                 
@@ -197,7 +218,7 @@
             });
         
             $(".close-button, .close-field").click(function() {
-                $("body").removeAttr('style')
+                $("#body").removeAttr('style')
                 $(".close-button, .close-field").hide();
                 $(".burger-button").show();
                 $(".menu-wrapper").slideToggle( "slow", function() {
@@ -272,8 +293,12 @@
             $(".arrow-right").click(()=>goToSlide(currentSlide+1))
             $(".arrow-left").click(()=>goToSlide(currentSlide-1))
             
+            if(window.innerWidth<460){
+                $(".item").removeClass("item-big")
+            }
+            
       });  
     </script>
-
+    </div>
 </body>
 </html>
