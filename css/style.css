@@ -76,13 +76,17 @@ ul.icons-container li {
 }
 .burger-button {
     display: none;
-    background: grey;
+    font-size: 2em;
+    text-align: center;
+    line-height: 1em;
+    line-height: -moz-block-height;
+    color: #606060;
 }
 
 .close-button {
     display: none;
     color: #c7773cd1;
-    font-family: 'Open Sans';
+    font-family: 'Arial', sans-serif;
     font-weight: 900;
     text-align: center;
     font-size: 3em;
