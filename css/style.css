@@ -29,7 +29,7 @@ ol, ul {
 
 
 @font-face {
-    font-family: 'Molot';
+    font-family: 'Molot', sans-serif;
     src: local('Molot'), url('../fonts/molot.woff2') format('woff2'), url('../fonts/molot.woff') format('woff'), url('../fonts/molot.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
