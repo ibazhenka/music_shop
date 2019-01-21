@@ -35,11 +35,11 @@ ol, ul {
     font-style: normal;
 }
 @font-face {
-    font-family: 'Open Sans Condensed', 'Arial', sans-serif;
-    src: local('Open Sans Condensed'), url('../fonts/opensanscondbold.ttf') format('ttf')
+    font-family: 'Open Sans Condensed', sans-serif;
+    src: local('Open Sans Condensed'),  url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700'); 
 }
 
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
 
 .menu-container {
     display: flex;
@@ -97,7 +97,7 @@ ul.icons-container li {
     background: transparent;
     z-index: 10;
 }
-.t-menu {
+.t-menu li a{
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
     color: #606060;
