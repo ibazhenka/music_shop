@@ -30,13 +30,13 @@ ol, ul {
 
 @font-face {
     font-family: 'Molot';
-    src: local('Molot'), url('/fonts/molot.woff2') format('woff2'), url('/fonts/molot.woff') format('woff'), url('/fonts/molot.ttf') format('truetype');
+    src: local('Molot'), url('../fonts/molot.woff2') format('woff2'), url('../fonts/molot.woff') format('woff'), url('../fonts/molot.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'Open Sans Condensed', 'Arial', sans-serif;
-    src: local('Open Sans Condensed'), url('/fonts/opensanscondbold.ttf') format('ttf')
+    src: local('Open Sans Condensed'), url('../fonts/opensanscondbold.ttf') format('ttf')
 }
 
 
